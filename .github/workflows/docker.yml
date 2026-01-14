@@ -45,7 +45,7 @@ jobs:
           type=semver,pattern={{major}}.{{minor}}
 
     - name: Build and push API image
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: .
         target: api
@@ -56,7 +56,7 @@ jobs:
         cache-to: type=gha,mode=max
 
     - name: Build and push Worker image
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: .
         target: worker
