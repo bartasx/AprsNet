@@ -52,7 +52,7 @@ jobs:
         run: dotnet pack src/Aprs.Sdk/Aprs.Sdk.csproj --configuration Release --output ./artifacts
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: |
             ./artifacts/*.nupkg
